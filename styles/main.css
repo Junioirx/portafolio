@@ -1,169 +1,240 @@
+/*TODO: global*/
 * {
-    margin: 0;
-    padding: 0;
     box-sizing: border-box;
 }
 
-.container{
-    width: 100%;
-    max-width: 960px;
-    margin: auto;
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 13px;
+    color: black;
 }
 
-/*global*/
+h1,
+h2,
+h3,
+h4 {
+    font-family: Helvetica;
+}
+
+a {
+    text-decoration: none;
+}
 
 h2 {
-    color: rgb(200, 200, 200);
+    color: #c8c8c8;
     font-size: 24px;
-    border-left: 3px solid rgb(200, 200, 200);
+    border-left: 3px solid #c8c8c8;
     padding-left: 7px;
     margin-bottom: 26px;
 }
-/*global*/
 
-header{
-    background-color: black;
-    
-    
+h3 {
+    font-size: 16px;
 }
-header .container{
+
+/* TODO: layaut*/
+.container {
+    max-width: 960px;
+    width: 100%;
+    margin: auto;
+}
+/*TODO: Menu js*/
+.menu-header {
+    height: 100vh;
+    position: fixed;
+    top: 80px;
+    width: 100%;
+    background: rgba(0,0,0,.5);
+}
+
+/*TODO: header*/
+header {
+    background-color: black;
+    height: 80px; 
+    padding: 0 20px;
+    position: fixed;
+    width: 100%;
+    z-index: 1;
+  
+}
+
+header .container {
     display: flex;
     justify-content: space-between;
     align-items: center;
     height: 80px;
-}
-header .logo{
-    color: white; 
-    font-size: 32px;
-
+    margin: auto;
+   
 }
 
+header a {
+    color: #fff;
+    padding-bottom: 9px;
+}
 
-nav ul { 
-    display: flex;
-    
+/*header a:hover {
+    border-bottom: 3px solid  #42704e;
+    transition: 300ms ease;
+}*/
+
+header .logo {
+    font-size: 32px;   
 }
-nav ul li{
-    margin-left: 20px;
-}
-nav ul li a{
+
+header nav {
     font-size: 16px;
-    color: white;
-    text-decoration: none;
+    overflow: hidden;
 }
-/*header cerrado*/
 
-/*main*/
+header nav a {
+    color: #c7c7c7;
+}
 
-/*sobre mi */
- 
-.sobre-mi .content-me{
+header ul {
     display: flex;
-
-
+    align-items: center;
 }
-.content-me figure{
-    margin-right: 40px;
-}
-.content-me figure img{
-    border-radius: 100%;
-    border:gray solid 6px;
 
-                   
+header ul li {
+    margin-left: 15px;
 }
-.text p{
-    margin-bottom: 36px;
+
+/*TODO: main*/
+main {
+    padding: 115px 0 35px;
+}
+
+main section {
+    margin-bottom: 70px;
+}
+
+/*TODO: hover*/
+main section:hover h2 {
+    color: #42704e;
+    transition: 500ms ease;
+    border-color: #42704e;
+} 
+/**/
+/*TODO: sobre mi*/
+
+.about-me .texto {
+    display: flex;
+}
+
+.about-me p {
     font-size: 18px;
     line-height: 28px;
 }
 
-.text ul{
+.about-me ul {
     display: flex;
-    
+    align-items: center;
 }
 
-.text ul li{
-    margin-left: 10px;
+.about-me ul li {
+    margin-right: 10px;
 }
 
-.text li a{
+.about-me ul li a {
     display: inline-block;
     width: 38px;
     height: 38px;
     text-align: center;
     line-height: 38px;
-    color: white;
     border-radius: 38px;
+    color: #fff;
     font-size: 18px;
-
 }
 
- .text ul li .linkendin{
+/*link social*/
+.about-me .linkedin {
     background-color: #0077B5;
-    
- }
- .text ul li .github{
-     background-color: black;
-
- }
- .text ul li .twitter{
-     background-color:  #1EA1F2;
-
- }
-
- .text ul li .skype{
-     background-color: #0495E2;
- }
-
- /*fin de sobre mi */
-
- .portafolio .content-portafolio{
-     display: flex;
-     flex-wrap: wrap;
-     justify-content: space-between; 
-
-
- }
- .portafolio article{
-
-    margin-bottom: 20px;
-    position: relative;
-
 }
-    .portafolio article img{
-        border: solid 10px #f0f0f0;
-    }
 
-    .portafolio .free{
-     position: absolute;
+.about-me .github {
+    background-color: black;
+}
+
+.about-me .twitter {
+    background-color: #1EA1F2;
+}
+
+.about-me .skype {
+    background-color:  #0495E2;
+}
+/**/
+
+.about-me figure {
+    margin-right: 40px;
+}
+
+.about-me figure img {
+    border-radius: 100%;
+    border: 6px solid #f0f0f0;
+}
+
+.about-me p {
+    margin-bottom: 36px;
+}
+
+/*TODO: hover*/
+.about-me:hover img {
+    border-color: #42704e;
+    transition: 500ms ease;
+}
+/**/
+
+/*TODO: portfolio*/
+
+.portfolio .articles {
+    display: flex;
+    flex-wrap: wrap;   
+    justify-content: space-between;
+}
+
+.portfolio article {
+    position: relative;
+    margin-bottom: 20px;
+}
+
+.portfolio article:hover .text {
+    display: flex;  
+}
+
+.portfolio article:hover img {
+    border-color: #42704e;
+}
+
+.portfolio .text {
+    position: absolute;
     top: 10px;
     left: 10px;
     right: 10px;
     bottom: 10px;
-    background: rgba(0, 0, 0, .5);
-    color: white;
+    background: rgb(0, 0, 0,0.5);
+    color: #fff;
     padding: 13px;
+     
     display: flex;
     flex-direction: column;
     justify-content: space-between;
     display: none;
 }
-.portafolio article:hover .free {
-    display: flex;
 
-}
-.portafolio article:hover img {
-    border-color: #42704e;
-}
-.free div ul{
-    display: flex;
-}
-.free div ul li{
-    margin-left: 10px;
-    margin-top: 10px;
+.portfolio .text h3 {
+    margin-bottom: 6px
 }
 
-.portafolio .free span {
+.portfolio .text ul {
+    display: flex;
+    align-items: center;
+}
+
+.portfolio .text ul li {
+    margin-right: 4px;
+}
+
+.portfolio .text span {
     display: inline-block;
     font-size: 11px;
     font-family: Helvetica;
@@ -172,11 +243,12 @@ nav ul li a{
     border-radius: 12px;
 }
 
-/*
-Mis habilidades
-*/
+.portfolio img {
+    border: 10px solid #f0f0f0;
+}
 
-.skills .wrap-skills {
+/*TODO: Habilidades*/
+.skills .habilidades-cont {
     display: flex;
     flex-wrap: wrap;
 }
@@ -192,16 +264,23 @@ Mis habilidades
     padding-right: 20px;
 }
 
-.skills .bar {
+.skills .barra {
     background: #4c2358;
     height: 20px;
     width: 100%;
     border-radius: 11px;
 }
 
-.skills .bar div {
+.skills .barra .relleno {
     height: 20px;
     border-radius: 11px;
+    background: #42704e;
+    width: 20%;
+    transition: 2.5s ease;
+}
+
+.skills .barra:hover .relleno {
+    width: 50%;
     transition: 1s ease;
 }
 
@@ -211,11 +290,236 @@ Mis habilidades
     width: 110px;
 }
 
+/*TODO: formulario*/
+.formulario {
+    display: flex;
+}
+
+.formulario .cont-formulario {
+    width: 70%;
+    border-right: solid 1px #d5d5d5;
+    padding-right: 20px;
+}
+
+.formulario .form{
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.formulario .form .input-cont {
+    width: 50%;
+    margin-bottom: 20px;
+}
 
 
+.formulario .form .input-cont:nth-child(odd) {
+    padding-right: 20px;
+}
 
+
+.formulario .form label {
+    display: block;
+     
+}
+
+.formulario .form input {
+    width: 100%;
+    height: 40px;
     
+}
 
+.formulario .textarea, textarea {
+    width: 100%;
+    margin-bottom: 10px;
+}
 
+.formulario .form input,
+.formulario .textarea textarea {
+    font-size: 12px;
+    border: solid 1px #d5d5d5;
+}
 
+.formulario .ubicacion {
+    padding-left: 20px;
+}
 
+.formulario .ubicacion div {
+    margin-bottom: 35px;
+}
+
+.formulario .ubicacion h4 {
+    margin-bottom: 16px;
+    font-weight: bold;
+}
+
+.formulario .ubicacion a {
+    color: black;
+}
+
+.formulario button {
+    background-color: #42704e;
+    color: white;
+    width: 160px;
+    height: 44px;
+}
+
+/*TODO: footer */
+footer {
+    background: black;
+    color: #fff;
+}
+
+footer .container {
+    display: flex;
+    justify-content: space-between;
+    padding: 30px 0;
+}
+
+footer a {
+    color: #fff;
+}
+
+/*Responsive*/
+@media (max-width:960px) {
+    .container {
+        padding: 0 20px;
+    }
+    
+    .portfolio article {
+        width: 49%;
+    }
+
+    .portfolio img {
+        width: 100%;
+    }
+}
+
+@media (max-width:768px) {
+    header .container nav {
+        display: none;
+        position: fixed;
+        top: 80px;
+        width: 100%;
+        height: 100vh;
+        background: rgba(0,0,0,.5);
+      
+    }
+    header nav ul {
+        display: block;
+        text-align: center;
+    }
+    header nav li {
+        margin: 0;
+    }
+    header nav ul li a {
+        border-bottom: 2px solid #fff;
+        display: block;
+        padding: 20px;
+        color: #fff;
+    }
+    header .menu {
+        display: block;
+        font-size: 30px;
+        color: #fff;
+        cursor: pointer;
+    }
+    .container {
+        padding: 0 20px;
+    }
+    .about-me .texto img {
+        border-color: #42704e;
+    }
+    main section h2 {
+        color: #42704e;
+        border-color: #42704e;
+    }
+    footer .container {
+        padding: 20px;
+    }
+}
+
+@media (max-width:660px) {
+    .about-me .texto {
+        display: block;
+        text-align: center;
+    }
+    .about-me .texto figure {
+        margin-bottom: 10px;
+        margin-right: auto;
+    }
+    .about-me ul {
+        justify-content: center;
+    }
+    .formulario {
+       display: block;
+    }
+    .formulario .cont-formulario {
+        width: 100%;
+        padding-right: 0;
+        border-right: none;
+        border-bottom: 1px solid #c8c8c8;
+        padding-bottom: 20px;
+    }
+
+    .formulario .ubicacion {
+        margin-top: 20px;
+        padding: 0;
+    }
+}
+
+@media (max-width:560px) {
+    .container {
+        padding: 0 15px;
+    }
+    .portfolio .articles {
+        display: block;
+    }
+    .portfolio .articles article {
+        width: 100%;
+    }
+    .portfolio .text {
+        display: block;
+        position: initial;
+    }
+    .portfolio .text div {
+        padding-bottom: 20px;
+    }
+    .portfolio article img {
+        border-color: #42704e;
+    }
+    .skills .habilidades-cont {
+        display: block;
+    }
+    .skills .skill {
+        width: 100%;
+    }
+    .skills .skill:nth-child(odd) {
+        padding-right: 0;
+    }
+    .skills .skill h3 {
+        position: absolute;
+        margin-left: 10px;
+        color: #fff;
+    }
+    .formulario .form {
+        display: block;
+    }
+    .formulario .cont-formulario .form .input-cont {
+        width: 100%;
+        margin-bottom: 10px;
+    }
+    .formulario .input-cont input {
+        width: 100%;
+        display: block;
+    }
+    .formulario .form .input-cont:nth-child(odd) {
+        padding-right: 0;
+    }
+    footer .container   {
+        display: block;
+        text-align: center;
+    }
+    footer p {
+        padding-bottom: 10px;
+    }
+}
